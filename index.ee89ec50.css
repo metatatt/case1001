@@ -1,0 +1,47 @@
+.hidden {
+  display: none;
+}
+
+#container {
+  max-height: 50vh;
+  z-index: 10;
+  background-color: #fff;
+  border-radius: 2vh;
+  flex-direction: column;
+  padding: 1vh 2vh 3vh;
+  transition: all .35s;
+  display: flex;
+  position: absolute;
+  bottom: -2vh;
+  left: 10%;
+  right: 10%;
+}
+
+#container.collapsed {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(10%);
+}
+
+#contents {
+  height: 100%;
+  text-align: justify;
+  flex-grow: 1;
+  font-size: .8rem;
+  overflow-y: scroll;
+}
+
+#contents h1 {
+  text-align: left;
+}
+
+.outer {
+  flex: none;
+}
+
+#closeButton {
+  float: right;
+  padding: .25em;
+}
+
+/*# sourceMappingURL=index.ee89ec50.css.map */
