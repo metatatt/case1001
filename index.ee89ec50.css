@@ -1,0 +1,36 @@
+#overlay {
+  z-index: 35;
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+}
+
+#savePrompt {
+  max-width: 80vw;
+  color: #000;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 2vmin;
+  font-family: sans-serif;
+  font-size: 6vmin;
+  font-weight: bold;
+  position: absolute;
+  bottom: 22vh;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#actionButton {
+  background-color: #007aff !important;
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
+  .recorder-container {
+    left: unset !important;
+    transform: unset !important;
+    right: 3vw !important;
+  }
+}
+
+/*# sourceMappingURL=index.ee89ec50.css.map */
