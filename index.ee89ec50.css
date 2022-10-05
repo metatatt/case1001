@@ -1,0 +1,25 @@
+#nextbutton {
+  width: 50vw;
+  height: auto;
+  text-align: center;
+  color: #fff;
+  background-color: #ad50ff;
+  border: .2em solid #fff;
+  border-radius: 100px;
+  position: absolute;
+  bottom: 6vh;
+  left: 25vw;
+}
+
+#nextbutton:active {
+  color: #ad50ff;
+  background-color: #fff;
+}
+
+h2 {
+  text-align: center;
+  font-family: monospace;
+  font-size: 1.3em;
+}
+
+/*# sourceMappingURL=index.ee89ec50.css.map */
