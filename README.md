@@ -1,15 +1,14 @@
-# 8th Wall Web Examples - AFrame - Flyer
+# 8th Wall Web Examples - AFrame - Toss an object
 
-This example uses image targets to display information about jellyfish on a flyer. It uses the xrextras-named-image-target component to connect an <a-entity> to an image target by name while the xrextras-play-video component enables video playback. 
+Tap the screen to toss tomatoes. When they hit the ground, they splat and make a sound. 
+Shows physics, collision events and sound fx.
 
-![artgallery-screenshot](../../../images/screenshot-flyer.jpg)
+![toss-screenshot](../../../images/screenshot-toss.jpg)
 
-[Try the live demo here](https://templates.8thwall.app/flyer-aframe)
+[Try the live demo here](https://8thwall.8thwall.app/tossobject-aframe)
 
+### Attribution
 
-![flyer](./flyer.jpg)
+Splat sound by [Mike Koenig](http://soundbible.com/642-Splat.html)
 
-
-## Uploading to Console
-
-To link the image targets to your app key, you will need to upload and enable each image to your app in console at console.8thwall.com.
+Tomato by [Google Poly](https://poly.google.com/view/dmzbb8UisNv)
