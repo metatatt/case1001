@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>three.js webgl - decal splatter</title>
+		<title>decal</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 		<link type="text/css" rel="stylesheet" href="main.css">
@@ -21,7 +21,7 @@
 		<script type="importmap">
 			{
 				"imports": {
-					"three": "../build/three.module.js",
+					"three": "./build/three.module.js",
 					"three/addons/": "./jsm/"
 				}
 			}
@@ -31,12 +31,12 @@
 
 			import * as THREE from 'three';
 
-			import Stats from 'three/addons/libs/stats.module.js';
-			import { GUI } from 'three/addons/libs/lil-gui.module.min.js';
+			import Stats from './jsm/libs/stats.module.js';
+			import { GUI } from './jsm/libs/lil-gui.module.min.js';
 
-			import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
-			import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
-			import { DecalGeometry } from 'three/addons/geometries/DecalGeometry.js';
+			import { OrbitControls } from './jsm/controls/OrbitControls.js';
+			import { GLTFLoader } from './jsm/loaders/GLTFLoader.js';
+			import { DecalGeometry } from './jsm/geometries/DecalGeometry.js';
 
 			const container = document.getElementById( 'container' );
 
@@ -54,8 +54,8 @@
 			const intersects = [];
 
 			const textureLoader = new THREE.TextureLoader();
-			const decalDiffuse = textureLoader.load( 'textures/decal/decal-diffuse.png' );
-			const decalNormal = textureLoader.load( 'textures/decal/decal-normal.jpg' );
+			const decalDiffuse = textureLoader.load( './textures/decal/decal-diffuse.png' );
+			const decalNormal = textureLoader.load( './textures/decal/decal-normal.jpg' );
 
 			const decalMaterial = new THREE.MeshPhongMaterial( {
 				specular: 0x444444,
@@ -234,9 +234,9 @@
 					mesh = gltf.scene.children[ 0 ];
 					mesh.material = new THREE.MeshPhongMaterial( {
 						specular: 0x111111,
-						map: textureLoader.load( 'models/gltf/LeePerrySmith/Map-COL.jpg' ),
-						specularMap: textureLoader.load( 'models/gltf/LeePerrySmith/Map-SPEC.jpg' ),
-						normalMap: textureLoader.load( 'models/gltf/LeePerrySmith/Infinite-Level_02_Tangent_SmoothUV.jpg' ),
+						map: textureLoader.load( './models/gltf/LeePerrySmith/Map-COL.jpg' ),
+						specularMap: textureLoader.load( './models/gltf/LeePerrySmith/Map-SPEC.jpg' ),
+						normalMap: textureLoader.load( './models/gltf/LeePerrySmith/Infinite-Level_02_Tangent_SmoothUV.jpg' ),
 						shininess: 25
 					} );
 
