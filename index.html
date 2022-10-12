@@ -30,6 +30,7 @@
 		<script type="module">
 
 			import * as THREE from 'three';
+			import * as CANNON from './build/cannon-es.js'; //Cannon JS https://github.com/pmndrs/cannon-es/blob/master/examples/threejs.html
 
 			import Stats from './jsm/libs/stats.module.js';
 			import { GUI } from './jsm/libs/lil-gui.module.min.js';
@@ -44,6 +45,10 @@
 			let mesh;
 			let raycaster;
 			let line;
+
+			//Cannon ES
+			let world;
+			let body;
 
 			const intersection = {
 				intersects: false,
@@ -89,6 +94,7 @@
 			};
 
 			init();
+			initCannon();
 			animate();
 
 			function init() {
@@ -110,7 +116,7 @@
 				controls.minDistance = 50;
 				controls.maxDistance = 200;
 
-				scene.add( new THREE.AmbientLight( 0x443333 ) );
+				scene.add( new THREE.AmbientLight( 0x000000  ) );
 
 				const dirLight1 = new THREE.DirectionalLight( 0xffddcc, 1 );
 				dirLight1.position.set( 1, 0.75, 0.5 );
@@ -126,7 +132,7 @@
 				line = new THREE.Line( geometry, new THREE.LineBasicMaterial() );
 				scene.add( line );
 
-				loadLeePerrySmith();
+				loadTheBaby();
 
 				raycaster = new THREE.Raycaster();
 
@@ -190,6 +196,7 @@
 						mouseHelper.position.copy( p );
 						intersection.point.copy( p );
 
+
 						const n = intersects[ 0 ].face.normal.clone();
 						n.transformDirection( mesh.matrixWorld );
 						n.multiplyScalar( 10 );
@@ -225,11 +232,26 @@
 
 			}
 
-			function loadLeePerrySmith() {
+			function initCannon() {
+				world = new CANNON.World()
+
+				// Box
+				const shape = new CANNON.Box(new CANNON.Vec3(1, 1, 1));
+				body = new CANNON.Body({
+				mass: 1,
+				})
+				body.addShape(shape);
+				body.angularVelocity.set(0, 10, 0);
+				body.angularDamping = 0.5;
+				world.addBody(body)
+			}
+
+
+			function loadTheBaby() {
 
 				const loader = new GLTFLoader();
 
-				loader.load( 'rex.glb', function ( gltf ) {
+				loader.load( 'LeePerrySmith.glb', function ( gltf ) {
 
 					mesh = gltf.scene.children[ 0 ];
 					mesh.material = new THREE.MeshPhongMaterial( {
@@ -242,6 +264,7 @@
 
 					scene.add( mesh );
 					mesh.scale.set( 10, 10, 10 );
+					mesh.position.set( 0, 0, 0 );
 
 				} );
 
@@ -291,6 +314,13 @@
 			function animate() {
 
 				requestAnimationFrame( animate );
+
+					// Cannon--Step the physics world
+					world.fixedStep()
+
+					// Cannon Copy coordinates from cannon.js to three.js
+					mesh.position.copy(body.position)
+					mesh.quaternion.copy(body.quaternion)
 
 				renderer.render( scene, camera );
 
