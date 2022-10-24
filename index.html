@@ -1,63 +1,147 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>ClearPoint</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    /* Remove the navbar's default rounded borders and increase the bottom margin */ 
+    .navbar {
+      margin-bottom: 50px;
+      border-radius: 0;
+    }
+    
+    .center {
+    text-align: center;
+    }
+
+    /* Remove the jumbotron's default bottom margin */ 
+     .jumbotron {
+      margin-bottom: 0;
+    }
+   
+    hr.dotted {
+  border-top: 3px dotted #bbb;
+}
+    /* Add a gray background color and some padding to the footer */
+    footer {
+      background-color: #f2f2f2;
+      padding: 25px;
+    }
+  </style>
+</head>
 <body>
 
-<ul>
-  <li><a href="kiosk.html">next</a></li>
-</ul>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="">2022.10</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
 
-<div align="center">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container"> 
+  <div class="center">
     <h1>SOW</h1>
     <p>itemized, modules 1-4, services A-D</p>
-    <iframe src="SOW.pdf#toolbar=0" width="80%" height="700px"></iframe>
+    <iframe src="SOW.pdf#toolbar=0" width="80%" height="700px" style="border:2px solid grey;"></iframe>
         <br>
         <br>   
+        <hr class="dotted">
 
-    <h1>Sample Workflow</h1>
-    <p>Scienctific Comm Project</p>
+        <br>
+        <br>
+     <h1>To Train: VR Demo/Video Room</h1>
+        <p>immersive training</p>
+        <iframe src="VR_rooms.pdf" width="80%" height="700px" style="border:2px solid grey;"></iframe>
+        <br>
+        <br>   
+        <hr class="dotted">
+
+        <br>
+        <br>
+    <h1>To Brief: AR Abstract</h1>
+        <p>3 minute happy encounter with a paper</p>
+        <iframe src="AR_Abstract.pdf" width="80%" height="700px" style="border:2px solid grey;"></iframe>
+        <br>
+        <br>   
+        <hr class="dotted">
+
+        <br>
+        <br>
+    <h1>AR Abstract Workflow</h1>
+    <p>mockup project: RACE-TF Trial(Cryo vs RF) </p>
     <br>
     <br>
       <h2>#1: source</h2>
-          <iframe src="RACE-tf.pdf#toolbar=0" width="80%" height="700px">
+          <iframe src="RACE-tf.pdf#toolbar=0" width="80%" height="700px" style="border:2px solid grey;" >
         </iframe>
     <p>--</p>
     <br>
       <h2>#2: slides & narration</h2>
-    <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTb9-Wwn-srZaIlkyL5KgBQOOEWNSY_E4BVCGQcOA5hlYjSClRX-g3XgM4t5_GNvfPNU7_B2gERj43A/embed?start=false&loop=true&delayms=3000" frameborder="0" width="80%" height="500" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
-    
+      <iframe src="RACE-tf2.pdf#toolbar=0" width="80%" height="700px" style="border:2px solid grey;"></iframe>
       <p>--</p>
       <br>
-      
-    <div style="width:1125px;">
-      
-      <div style="float:left;">
-        <h2>#3: interactive AR</h2>
-    <iframe  id="embedded-human" frameBorder="0" width="360" height="400" allowFullScreen="true" loading="lazy" src="https://human.biodigital.com/viewer/?id=4tiC&ui-info=false&ui-search=false&ui-undo=false&ui-fullscreen=false&ui-nav=false&ui-tools=false&ui-help=false&ui-chapter-list=false&ui-label-list=true&ui-anatomy-descriptions=false&ui-tutorial=false&ui-loader=none&ui-whiteboard=false&ui-layers=true&ui-anatomy-labels=true&disable-scroll=false&load-rotate=10&dk=e9df512c1717e3c6c32dc36d647b19ad9e2df71d&paid=o_0cd14c8d"></iframe>
-      </div>
-    
-      <div style="float:right;">
-        <h2>#4: charts & components    </h2>     <button onclick="location.href='kiosk.html'" type="button">
-         next page</button>
-          <iframe src="Case_MasterPPT.pdf#toolbar=0" width="600" height="400px">
-      </div>
-      <p>--</p>
-      <br>
-    
-       <div style="float:right;">
-          <button onclick="location.href='kiosk.html'" type="button">
-         <h2>next page</h2></button>
-      </div>
-    
-<h2>---- </h2>
-    </div>
 
+      <h2>#3: interactive AR</h2>
+  <iframe  id="embedded-human" frameBorder="0" width="360" height="400" allowFullScreen="true" loading="lazy" src="https://human.biodigital.com/viewer/?id=4tiC&ui-info=false&ui-search=false&ui-undo=false&ui-fullscreen=false&ui-nav=false&ui-tools=false&ui-help=false&ui-chapter-list=false&ui-label-list=true&ui-anatomy-descriptions=false&ui-tutorial=false&ui-loader=none&ui-whiteboard=false&ui-layers=true&ui-anatomy-labels=true&disable-scroll=false&load-rotate=10&dk=e9df512c1717e3c6c32dc36d647b19ad9e2df71d&paid=o_0cd14c8d"></iframe>
+
+ 
+      <h2>#4: charts & components    </h2>     
+             <iframe src="Case_MasterPPT.pdf#toolbar=0" width="600" height="400px">   </iframe>
+
+             <br>   <br>   <br>
+      <p>--</p>
+    <br>
+      <h2>#5: location and experience</h2>
+      <iframe width="340" height="604" src="https://www.youtube.com/embed/H8w2MfkeD0E" title="Kiosk AR demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </iframe>
     <p>--</p>
     <br>
+    <br>   
+    <hr class="dotted">
 
     <br>
+    <br>
 
-</div>   
+<h2>Tools, Works and Services</h2>
+<iframe src="Deploy.pdf" width="80%" height="700px">
+</iframe>
+<p>--</p>
 <br>
-<button onclick="location.href='kiosk.html'" type="button">
-  <h2>next page</h2></button>
+<br>   
+<hr class="dotted">
+
+<br>
+<br>
+<h2>PDF 1: Neuro related training</h2>
+<iframe src="VR2paper.pdf" width="80%" height="700px">
+</iframe>
+<p>--</p>
+<br>
+<h2>PDF 2: AR/VR primers</h2>
+<iframe src="VR1paper.pdf" width="80%" height="700px">
+</iframe>
+<p>--</p>
+<br>
+<br>
+
+  </div> 
+  
+
 </body>
 </html>
