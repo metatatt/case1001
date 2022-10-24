@@ -1,14 +1,10 @@
-# 8th Wall Web Examples - AFrame - Toss an object
+# 8th Wall Web Examples - AFrame - Change animations
 
-Tap the screen to toss tomatoes. When they hit the ground, they splat and make a sound. 
-Shows physics, collision events and sound fx.
+This interactive example allows the user to position, scale, rotate, and change between animations embedded in a 3D model. This showcases raycasting, gesture inputs and using A-Frame's animation-mixer.
 
-![toss-screenshot](../../../images/screenshot-toss.jpg)
+![](https://media.giphy.com/media/Su738nSVeEnp36q5iA/giphy.gif)
 
-[Try the live demo here](https://8thwall.8thwall.app/tossobject-aframe)
+Learn more about the component [here](https://github.com/donmccurdy/aframe-extras/tree/master/src/loaders#animation)
+and GLB conversion [here](https://www.8thwall.com/glb).
 
-### Attribution
-
-Splat sound by [Mike Koenig](http://soundbible.com/642-Splat.html)
-
-Tomato by [Google Poly](https://poly.google.com/view/dmzbb8UisNv)
+[Try the live demo here](https://templates.8thwall.app/animation-mixer-aframe)
