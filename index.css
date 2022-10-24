@@ -22,4 +22,8 @@
     font-family: monospace;
   }
   Footer
-  © 2022 XXX, Inc.
+  {
+    font-size: 1.3em;
+    text-align: center;
+    font-family: monospace;
+  }
