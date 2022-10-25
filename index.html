@@ -40,7 +40,7 @@
     <!-- We can define assets here to be loaded when A-Frame initializes -->
     <a-assets>
       <!-- Credit to Poly by Google for the model: https://poly.google.com/view/5ZMAz7_ucTn -->
-      <a-asset-item id="heartChartModel" src="heart_chart.glb"></a-asset-item>
+      <a-asset-item id="animatedModel" src="heart_chart.glb"></a-asset-item>
   
   
           
@@ -69,17 +69,18 @@
     </a-entity>
   
   
-    <a-light type="ambient" intensity="0.7"></a-light>
+    <a-light type="ambient" intensity="0.9"></a-light>
   
     <a-entity 
-      id="model" 
-      gltf-model="#heartChartModel" 
-      class="cantap" 
-      xrextras-hold-drag 
-      xrextras-two-finger-rotate 
-      xrextras-pinch-scale 
-      scale="20 20 20" 
-      shadow="receive: false">
+    id="model"
+    gltf-model="#animatedModel"
+    class="cantap"
+    scale="20 20 20"
+    animation-mixer="clip: *_beat; loop: repeat"
+    xrextras-hold-drag
+    xrextras-two-finger-rotate
+    xrextras-pinch-scale
+    shadow>
     </a-entity>
           <a-box id="target-box1" color="#5E82C5" position="-2 2 -1" sctimer="TimeOutTime:10; HideMe:1"></a-box>
           <a-box id="target-box1" color="#5E82C5" position="-1 3 -1" sctimer="TimeOutTime:7; HideMe:1"></a-box>
