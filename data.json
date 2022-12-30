@@ -1,0 +1,20 @@
+{
+     "ppt": [
+      {
+        "name": "slide1",
+        "labeltext": "#1",
+        "pos": [2,3,0]
+      },
+      {
+        "name": "slide2",
+        "labeltext": "#2",
+        "pos": [2,3,0]
+      },
+      {
+        "name": "slide3",
+        "labeltext": "#3",
+        "pos": [2,3,0]
+      }
+    ]
+  }
+  
